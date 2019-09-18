@@ -1,6 +1,6 @@
 ---
-title: mysqls事务
-date: 2019-08-22 17:49:43
+title: mysql3：事务
+date: 2019-09-18 18:00:21
 tags: mysql
 ---
 # 事务
@@ -177,7 +177,7 @@ undo log的存储不同于redolog，它存放在数据库内部一个特殊的�
 
 下面是数据库事务的整个流程：
 
-{% asset_img mysql-transaction-9.png %}
+{% asset_img mysql-transaction-10.png %}
 
 事务进行过程中，每次sql语句执行，都会记录undo log 和 redo log，然后更新数据形成脏页，然后redo log按照时间或者空间等条件进行落盘，undo log和脏页按照checkpoint进行落盘，落盘后相应的redo log就可以删除了。此时，事务还未commit，如果发生崩溃，则首先检查checkpoint记录，使用相应的redo log进行数据和undo log的恢复，然后查看undo log的状态发现事务尚未提交，然后就使用undo log进行回滚。事务执行commit操作时，会将本事务相关的所有redo log都进行落盘，只有所有redo log都落盘成功，事务才算commit成功。然后内存中的数据脏页继续按照checkpoint进行落盘。如果此时发生了崩溃，则只使用redo log进行数据恢复。
 

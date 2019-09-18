@@ -1,9 +1,8 @@
 ---
-title: MySQL锁
-date: 2019-08-22 17:47:07
+title: mysql2：锁
+date: 2019-09-18 17:57:35
 tags: mysql
 ---
-#  MySQL锁介绍
 
 {% asset_img mysql-lock-1.png %}
 
@@ -363,8 +362,3 @@ Session1: update mylock set name='qqq' where id=2; -- 加写锁被阻塞
 Session2: update mylock set name='222' where id=1; -- 加写锁会死锁，不允许操作
 ERROR 1213 (40001): Deadlock found when trying to get lock; try restarting transaction
 ```
-
-
-
-
-
