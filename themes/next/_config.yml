@@ -143,7 +143,7 @@ exturl: false
 #baidu_site_verification:
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: false
+baidu_push: true
 
 
 # ---------------------------------------------------------------
@@ -158,10 +158,11 @@ baidu_push: false
 # External url should start with http:// or https://
 menu:
   主页: / || home
-  关于: /about/ || user
+  # 全部: /alllist || list
   标签: /tags/ || tags
-  分类: /categories/ || th
-  归档: /archives/ || archive
+  关于: /about/ || user
+  # 分类: /categories/ || th
+  # 归档: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
