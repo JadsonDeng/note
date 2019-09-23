@@ -28,7 +28,11 @@ date: 2019-09-22 14:27:45
 + {% post_link spring-bean-resolve-meta-method Spring10：IOC 之解析 bean 标签：meta、lookup-method、replace-method %}
 + {% post_link spring-resolve-construct-property Spring11：IOC 之解析 bean 标签：constructor-arg、property 子元素 %}
 + {% post_link spring-resolve-custom1 Spring12：IOC 之解析 bean 标签：解析自定义标签 %}
-+ {% post_link spring-resolve-cuestom2 Spring13：IOC 之解析自定义标签 %}
++ {% post_link spring-resolve-custom2 Spring13：IOC 之解析自定义标签 %}
 + {% post_link spring-regist-bendefinition Spring14：IOC 之注册解析的 BeanDefinition %}
++ {% post_link spring-ioc-summary Spring15：IOC 之 IOC 初始化总结 %}
++ {% post_link %}
++ {% post_link %}
++ {% post_link %}
 + {% post_link %}
 + {% post_link %}
