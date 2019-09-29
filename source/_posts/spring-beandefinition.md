@@ -1,7 +1,7 @@
 ---
 title: Spring5：IOC之注册 BeanDefinition
 date: 2019-09-23 13:01:50
-tags: sprign
+tags: spring
 ---
 
 获取`Document`对象后，会根据该对象和 Resource 资源对象调用`registerBeanDefinitions()`方法，开始注册`BeanDefinitions`之旅。如下：

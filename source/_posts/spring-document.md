@@ -1,7 +1,7 @@
 ---
 title: Spring6：IOC之获取Documment对象
 date: 2019-09-23 13:10:02
-tags:
+tags: spring
 ---
 
 在 `XmlBeanDefinitionReader.doLoadDocument()` 方法中做了两件事情，一是调用 `getValidationModeForResource()` 获取 XML 的验证模式，二是调用 `DocumentLoader.loadDocument()` 获取 Document 对象。之前已经分析了获取 XML 验证模式，这篇我们分析获取 `Document `对象。
