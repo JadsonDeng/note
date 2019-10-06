@@ -17,7 +17,7 @@ date: 2019-09-22 14:27:45
 + {% post_link redis2-distribute-lock 分布式锁 %}
 + {% post_link redis3-delay-queue 延时队列 %}
 + {% post_link redis4-bitmap 位图 %}
-+ {% post_link %}
++ {% post_link redis5-hyperlog HyperLogLog %}
 + {% post_link %}
 + {% post_link %}
 + {% post_link %}
