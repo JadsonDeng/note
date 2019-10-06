@@ -5,6 +5,15 @@ date: 2019-09-22 14:27:45
 
 文章正在从云笔记迁移到这里。。。
 
+## Java
++ {% post_link ArrayList ArrayList %}
++ {% post_link LinkedList LinkedList %}
++ {% post_link HashSet HashSet %}
++ {% post_link HashMap HashMap %}
++ {% post_link TreeMap TreeMap %}
++ {% post_link java1-threadlocal ThreadLocal %}
++ {% post_link ConcurrentHashMap ConcurrentHashMap %}
+
 ## Spring
 + {% post_link spring-ioc Spring1：IOC 之深入理解 Spring IoC %}
 + {% post_link spring-resourceloader Spring2：统一资源加载策略 %}
@@ -36,6 +45,10 @@ date: 2019-09-22 14:27:45
 
 ## 应用
 + {% post_link practice1-session-consistent session一致性架构设计实践 %}
++ {% post_link practice2-mysql-bigtable-optimize mysql大表优化方案 %}
++ {% post_link practice3-thread-oom-others 一个线程OOM，进程里其他线程还能运行么？ %}
++ {% post_link practice4-cache-is-right 缓存，你真的用对了么？ %}
+
 
 ## redis
 + {% post_link redis1-datatype Redis数据结构 %}
