@@ -267,3 +267,29 @@ Exception in thread "main" java.lang.IllegalMonitorStateException
 1. 调用unpark()方法之后，再调用park()，线程会直接运行。
 2. 提前调用的unpark，连续多次调用unpark后，第一次调用park后会拿到许可直接运行，后续调用会进入等待。
 3. 线程调用park还未调用unpark挂起后，是不释放锁的。
+
+## 拓展--伪唤醒
+
+之前代码中用if来判断是否需要进入等待（挂起）状态，这样的做法是错误的！
+
+官方建议应该在循环中检查等待条件，原因是处于等待状态的线程可能会收到错误警报和伪唤醒，如果不在循环中检查等待条件，程序就会在没有满足结束条件的情况下退出。
+
+伪唤醒是指线程并非是因为notify、notifyAll、resume、unpark等api调用而意外唤醒，是更底层原因导致。
+
+错误的用法：
+```
+if (ice == null) {
+    System.out.println("没有冰激凌，进入等待");
+    LockSupport.park();
+    System.out.println("等待完成，小朋友买到了冰激淋");
+}
+```
+
+正确的用法：
+```
+while (ice == null) {
+    System.out.println("没有冰激凌，进入等待");
+    LockSupport.park();
+    System.out.println("等待完成，小朋友买到了冰激淋");
+}
+```
