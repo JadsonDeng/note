@@ -14,6 +14,8 @@ date: 2019-09-22 14:27:45
 + {% post_link java1-threadlocal ThreadLocal %}
 + {% post_link ConcurrentHashMap ConcurrentHashMap %}
 + {% post_link java-threadpool 线程池ThreadPool %}
++ {% post_link java-thread-communicate 线程间通信 %}
++ {% post_link java-hashmap-hash HashMap中hash(Object key)的原理，为什么这样做? %}
 
 ## Spring
 + {% post_link spring-ioc Spring1：IOC 之深入理解 Spring IoC %}
